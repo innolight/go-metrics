@@ -1,4 +1,4 @@
-module go-metrics
+module github.com/innolight/go-metrics
 
 go 1.15
 

@@ -2,13 +2,14 @@ package main
 
 import (
 	"database/sql"
-	_ "github.com/lib/pq"
-	"github.com/prometheus/client_golang/prometheus"
-	"github.com/prometheus/client_golang/prometheus/promhttp"
-	"go-metrics/promdb"
 	"log"
 	"net/http"
 	"time"
+
+	"github.com/innolight/go-metrics/promdb"
+	_ "github.com/lib/pq"
+	"github.com/prometheus/client_golang/prometheus"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
 
 func main() {

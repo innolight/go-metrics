@@ -6,7 +6,12 @@ A set of Go libraries to collect metrics for various infrastructure components a
 
 promdb module collects database metrics ([sql.DBStats](https://golang.org/pkg/database/sql/#DBStats)) of database connection pools and expose the metrics in the Prometheus format.
 
-### Example usage
+**Install**
+```
+go get github.com/innolight/go-metrics/promdb
+```
+
+**Example usage**
 
 ```go
 package main
@@ -19,7 +24,7 @@ import (
 	_ "github.com/lib/pq"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
-	"go-metrics/promdb"
+	"github.com/innolight/go-metrics/promdb"
 )
 
 func main() {
@@ -47,7 +52,8 @@ To quickly get metrics from the application above:
 ```bash
 curl localhost:8080/metrics | grep db
 ```
-### Exposed Metrics
+
+**Exposed Metrics**
 
 | Name                                 | Type    | Description                                                       | Labels  |
 |--------------------------------------|---------|-------------------------------------------------------------------|---------|
